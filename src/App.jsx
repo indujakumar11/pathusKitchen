@@ -55,14 +55,19 @@ function AppContent() {
 
     const resetScroll = () => {
       if (!location.hash) {
+        // Force immediate scroll to top for both window and Lenis
         window.scrollTo(0, 0);
-        lenisRef.current?.scrollTo(0, { immediate: true });
+        if (lenisRef.current) {
+          lenisRef.current.scrollTo(0, { immediate: true });
+        }
       }
-      ScrollTrigger.refresh();
+      // Re-calculate ScrollTrigger positions for the new page
+      setTimeout(() => ScrollTrigger.refresh(), 50);
     };
 
-    // Delay scroll reset to ensure the new page DOM is painted
-    setTimeout(resetScroll, 10);
+    // Increase delay slightly to ensure DOM is ready
+    const timer = setTimeout(resetScroll, 50);
+    return () => clearTimeout(timer);
 
     gsap.fromTo(
       pageRef.current,
