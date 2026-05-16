@@ -1,0 +1,110 @@
+:root {
+  /* ── Brand Colors ── */
+  --color-primary:        #D4A373;
+  --color-primary-hover:  #B5835A;
+  --color-primary-light:  #E2C4A7;
+  --color-primary-pale:   #3A2A1A;
+
+  --color-secondary:      #E9B824;
+  --color-secondary-hover:#C99B1C;
+  --color-secondary-light:#F2D16A;
+  --color-secondary-pale: #3A2E09;
+
+  --color-accent:         #C0533C;
+  --color-accent-hover:   #9B412E;
+  --color-accent-light:   #D88371;
+  --color-accent-pale:    #301610;
+
+  --color-whatsapp:       #25D366;
+  --color-whatsapp-hover: #1DA851;
+
+  /* ── Neutrals ── */
+  --color-dark:           #FFFFFF;
+  --color-dark-brown:     #FDF9F5;
+  --color-text:           #F2EBE5;
+  --color-text-medium:    #D1C4B9;
+  --color-text-muted:     #A69B90;
+  --color-text-light:     #6D655D;
+
+  /* ── Backgrounds ── */
+  --color-bg:             #0F0D0C;
+  --color-bg-warm:        #141210;
+  --color-bg-card:        #1A1816;
+  --color-bg-dark:        #000000;
+  --color-bg-section:     #171412;
+
+  /* ── Borders ── */
+  --color-border:         #38322D;
+  --color-border-light:   #24201D;
+
+  /* ── Typography ── */
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-accent:  'Cormorant Garamond', Georgia, serif;
+
+  /* ── Fluid Font Scale ── */
+  --text-xs:   clamp(0.7rem,  1.4vw, 0.8rem);
+  --text-sm:   clamp(0.85rem, 1.7vw, 0.95rem);
+  --text-base: clamp(1rem,    2vw,   1.05rem);
+  --text-lg:   clamp(1.1rem,  2.2vw, 1.25rem);
+  --text-xl:   clamp(1.25rem, 2.5vw, 1.5rem);
+  --text-2xl:  clamp(1.5rem,  3vw,   2rem);
+  --text-3xl:  clamp(2rem,    4vw,   2.75rem);
+  --text-4xl:  clamp(2.5rem,  5vw,   3.75rem);
+  --text-5xl:  clamp(3rem,    6.5vw, 5.5rem);
+
+  /* ── Spacing ── */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* ── Layout ── */
+  --container-max:     1280px;
+  --container-pad:     clamp(1rem, 5vw, 2rem);
+  --section-pad:       clamp(4rem, 8vw, 7rem);
+  --header-h:          70px;
+  --top-offset:        70px;
+
+  /* ── Radius ── */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   20px;
+  --r-xl:   32px;
+  --r-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-xs:   0 1px 4px  rgba(0, 0, 0, 0.4);
+  --shadow-sm:   0 2px 8px  rgba(0, 0, 0, 0.5);
+  --shadow-md:   0 4px 20px rgba(0, 0, 0, 0.6);
+  --shadow-lg:   0 8px 40px rgba(0, 0, 0, 0.7);
+  --shadow-xl:   0 16px 64px rgba(0, 0, 0, 0.8);
+  --shadow-warm: 0 4px 24px rgba(212, 163, 115, 0.10);
+  --shadow-gold: 0 4px 24px rgba(233, 184, 36, 0.10);
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
+
+  /* ── Transitions ── */
+  --ease-fast:   0.15s ease;
+  --ease-base:   0.3s ease;
+  --ease-slow:   0.55s ease;
+  --ease-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-index ── */
+  --z-base:     1;
+  --z-dropdown: 10;
+  --z-sticky:   50;
+  --z-header:   100;
+  --z-overlay:  200;
+  --z-cart:     300;
+  --z-modal:    400;
+}

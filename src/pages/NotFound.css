@@ -1,0 +1,48 @@
+.nf-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-warm);
+  padding: var(--sp-8) var(--container-pad);
+}
+
+.nf-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+  max-width: 480px;
+}
+
+.nf-icon { font-size: 4rem; }
+
+.nf-code {
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  margin: 0;
+}
+
+.nf-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-dark-brown);
+}
+
+.nf-sub {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.nf-actions {
+  display: flex;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--sp-2);
+}

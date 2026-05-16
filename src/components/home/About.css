@@ -1,0 +1,229 @@
+.about {
+  background: var(--color-bg-section);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(212, 163, 115, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(212, 163, 115, 0.03) 0%, transparent 50%);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Main Grid ── */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-16);
+  align-items: center;
+  margin-bottom: var(--sp-20);
+}
+
+/* ── Image ── */
+.about__image-wrap {
+  position: relative;
+}
+
+.about__image {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  display: block;
+  box-shadow: var(--shadow-xl);
+}
+
+.about__image-badge {
+  position: absolute;
+  bottom: var(--sp-6);
+  right: calc(-1 * var(--sp-6));
+  background: var(--color-primary);
+  color: #fff;
+  padding: var(--sp-4) var(--sp-6);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-warm);
+  text-align: center;
+}
+
+.badge-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.badge-txt {
+  display: block;
+  font-size: var(--text-xs);
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+  margin-top: var(--sp-1);
+}
+
+.about__image-note {
+  position: absolute;
+  top: var(--sp-6);
+  left: calc(-1 * var(--sp-6));
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: var(--sp-3) var(--sp-5);
+  border-radius: var(--r-full);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-medium);
+  white-space: nowrap;
+}
+
+/* ── Text ── */
+.about__title {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--sp-5);
+  line-height: 1.2;
+}
+
+.about__title em {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.about__lead {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-dark-brown);
+  line-height: 1.6;
+  margin-bottom: var(--sp-4);
+}
+
+.about__body {
+  font-size: var(--text-base);
+  color: var(--color-text-medium);
+  line-height: 1.8;
+  margin-bottom: var(--sp-4);
+}
+
+.about__highlights {
+  display: flex;
+  gap: var(--sp-8);
+  margin-top: var(--sp-8);
+  padding-top: var(--sp-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.hl-num {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.hl-txt {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ── Pillars ── */
+.about__pillars {
+  display: flex;
+  gap: var(--sp-6);
+  align-items: stretch; /* crucial for uniform height */
+  margin-top: var(--sp-12);
+  width: 100%;
+}
+
+.about__pillar {
+  flex: 1;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--r-lg);
+  padding: var(--sp-10) var(--sp-6);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--ease-base), border-color var(--ease-base);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+}
+
+/* Clean hover */
+.about__pillar:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.pillar-icon {
+  display: block;
+  font-size: 2.2rem;
+  margin-bottom: var(--sp-4);
+  line-height: 1;
+}
+
+.pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark-brown);
+  margin-bottom: var(--sp-3);
+  line-height: 1.2;
+}
+
+.pillar-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+
+  .about__image { height: 400px; }
+
+  .about__pillars {
+    flex-wrap: wrap;
+  }
+  
+  .about__pillar {
+    flex: 1 1 calc(50% - var(--sp-6));
+  }
+
+  .about__image-badge {
+    right: var(--sp-4);
+    bottom: var(--sp-4);
+  }
+
+  .about__image-note {
+    left: var(--sp-4);
+    top: var(--sp-4);
+  }
+}
+
+@media (max-width: 600px) {
+  .about__pillar {
+    flex: 1 1 100%;
+  }
+
+  .about__highlights {
+    gap: var(--sp-6);
+  }
+
+  .about__image { height: 320px; }
+}

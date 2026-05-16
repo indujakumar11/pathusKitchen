@@ -1,0 +1,57 @@
+.cat-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  padding: 0;
+}
+
+.cat-filter__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0.6rem 1.25rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--r-full);
+  background: var(--color-bg-card);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-medium);
+  cursor: pointer;
+  transition: all var(--ease-base);
+  white-space: nowrap;
+  box-shadow: var(--shadow-xs);
+}
+
+.cat-filter__btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-pale);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-warm);
+}
+
+.cat-filter__btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-warm);
+}
+
+.cfb-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ── Responsive: horizontal scroll on mobile ── */
+@media (max-width: 600px) {
+  .cat-filter {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--sp-4);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .cat-filter::-webkit-scrollbar { display: none; }
+  .cat-filter__btn { flex-shrink: 0; }
+}

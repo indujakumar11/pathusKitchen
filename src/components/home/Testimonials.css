@@ -1,0 +1,218 @@
+.testimonials {
+  background: var(--color-bg-section);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: '❝';
+  position: absolute;
+  top: var(--sp-16);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18rem;
+  font-family: var(--font-heading);
+  color: rgba(181, 52, 26, 0.04);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.testimonials__wrapper {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-8);
+}
+
+/* ── Card ── */
+.testi-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--r-xl);
+  padding: var(--sp-10) var(--sp-12);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  position: relative;
+}
+
+.testi-card__stars {
+  font-size: 1.4rem;
+  color: var(--color-secondary-light);
+  letter-spacing: 2px;
+  margin-bottom: var(--sp-5);
+}
+
+.testi-card__text {
+  font-family: var(--font-accent);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.75;
+  margin-bottom: var(--sp-8);
+  border: none;
+  padding: 0;
+}
+
+.testi-card__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.testi-card__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-warm);
+}
+
+.testi-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.testi-name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-dark-brown);
+}
+
+.testi-loc {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.testi-product {
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.testi-date {
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+  flex-shrink: 0;
+}
+
+/* ── Controls ── */
+.testimonials__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+}
+
+.testi-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg-card);
+  color: var(--color-text-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--ease-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.testi-btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: var(--shadow-warm);
+}
+
+.testi-dots {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: center;
+}
+
+.testi-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border);
+  border: none;
+  cursor: pointer;
+  transition: all var(--ease-base);
+  padding: 0;
+}
+
+.testi-dot--active {
+  background: var(--color-primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ── Avatar row ── */
+.testi-avatars {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: center;
+  justify-content: center;
+}
+
+.testi-avatar-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: var(--color-bg-warm);
+  color: var(--color-text-medium);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--ease-base);
+  opacity: 0.55;
+}
+
+.testi-avatar-btn.active {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+  opacity: 1;
+  transform: scale(1.12);
+  box-shadow: var(--shadow-warm);
+}
+
+.testi-avatar-btn:hover:not(.active) {
+  opacity: 0.85;
+  border-color: var(--color-text-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .testi-card {
+    padding: var(--sp-6) var(--sp-5);
+  }
+
+  .testi-card__text {
+    font-size: var(--text-base);
+  }
+
+  .testi-card__footer {
+    flex-wrap: wrap;
+  }
+
+  .testi-date { display: none; }
+}
