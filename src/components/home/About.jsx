@@ -38,7 +38,7 @@ export default function About() {
         <div className="about__grid">
           <div className="about__image-wrap">
             <img
-              src="/assets/images/anjaraipetti.jpg"
+              src="assets/images/anjaraipetti.jpg"
               alt="A warm South Indian kitchen with anjaraipetti spice box"
               loading="lazy"
               className="about__image"

@@ -23,7 +23,7 @@ export default function WhatsAppCTA() {
     <section className="wa-cta" ref={ref}>
       <div className="wa-cta__bg-spice" aria-hidden="true">
         <img
-          src="/assets/images/carousel2.jpg"
+          src="assets/images/carousel2.jpg"
           alt=""
         />
         <div className="wa-cta__overlay" />

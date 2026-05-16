@@ -11,15 +11,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CAT_META = {
   'masala-powders': {
-    image: '/assets/images/coverimage.jpg',
+    image: 'assets/images/coverimage.jpg',
     color: '#B5341A', bg: '#FBE9E4',
   },
   'premix': {
-    image: '/assets/images/whole_spices.png',
+    image: 'assets/images/whole_spices.png',
     color: '#3D6B47', bg: '#E6F0E8',
   },
   'instant-use': {
-    image: '/assets/images/filter_coffee.png',
+    image: 'assets/images/filter_coffee.png',
     color: '#C8850A', bg: '#FEF3D7',
   },
 };
@@ -128,7 +128,7 @@ function ProductsCategoryView({ categoryId, initialSearch, onBack }) {
   }, [initialSearch]);
 
   const category = categoryId ? CATEGORIES.find(c => c.id === categoryId) : null;
-  const meta = categoryId ? CAT_META[categoryId] : { bg: '#F2E8DC', color: '#2D1810', image: '/assets/images/coverimage.jpg' };
+  const meta = categoryId ? CAT_META[categoryId] : { bg: '#F2E8DC', color: '#2D1810', image: 'assets/images/coverimage.jpg' };
 
   const filtered = PRODUCTS.filter(p => {
     const inCat = categoryId ? p.category === categoryId : true;

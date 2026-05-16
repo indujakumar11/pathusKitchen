@@ -58,7 +58,7 @@ export default function Contact() {
       <div className="contact-hero">
         <div className="contact-hero__bg">
           <img
-            src="/assets/images/carousel1.jpg"
+            src="assets/images/carousel1.jpg"
             alt="Spices"
             loading="eager"
           />

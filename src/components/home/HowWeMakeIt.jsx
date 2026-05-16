@@ -11,28 +11,28 @@ const STEPS = [
     title: 'Source Whole Spices',
     desc: 'We source only whole, unprocessed spices directly from trusted farmers — coriander from Rajasthan, pepper from Kerala, turmeric from Erode.',
     icon: '',
-    image: '/assets/images/whole_spices.png',
+    image: 'assets/images/whole_spices.png',
   },
   {
     num: '02',
     title: 'Sun Dry & Roast',
     desc: 'Each spice is sun-dried or slow-roasted over low flame to unlock its full aroma before grinding. No shortcuts, ever.',
     icon: '',
-    image: '/assets/images/carousel1.jpg',
+    image: 'assets/images/carousel1.jpg',
   },
   {
     num: '03',
     title: 'Stone Ground Fresh',
     desc: 'Ground on a traditional stone mill that preserves the natural oils. The difference in aroma versus factory grinding is immediate and unmistakable.',
     icon: '',
-    image: '/assets/images/carousel2.jpg',
+    image: 'assets/images/carousel2.jpg',
   },
   {
     num: '04',
     title: 'Packed on Order',
     desc: 'We grind and pack only after you place your order. No sitting on shelves for months. Your masala is as fresh as it gets.',
     icon: '',
-    image: '/assets/images/carousel3.jpg',
+    image: 'assets/images/carousel3.jpg',
   },
 ];
 
